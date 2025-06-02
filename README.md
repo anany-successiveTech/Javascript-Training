@@ -25,7 +25,19 @@ The "12 Factors" are the methedology used for building modern, scalable and main
 
 #### There are 5 levels of "Atomic Design"
 
-1. 
+1. Atoms -> Smallest building block unit like input fields, icons, buttons, lables, fonts. 
+2. Molecules -> A group of multiple 'Atoms' working together is a molecules.
+3. Organisms -> Complex UI section made by grouping molecules or atoms.
+4. Templates -> The page level layout which shows the wirefram like structure of home page.
+5. Pages -> Specific instance of the finnal page with real content like image, colors, text.
 
 
 
+
+-> Advantages of Following "Atomic Design"
+1. Code reusability -> so that we don't have write same code again and again.
+2. Maintainablity -> means when we want to update the button design we'll only update that Atom.
+3. Collaboration -> Atomic Design makes "Collaboration" easy because every developers use same compoment naming convention.
+4. Consistancy -> keeping unified look and feel.
+
+These are the 5 Levels of "Atomic Design".
