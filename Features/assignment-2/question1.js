@@ -1,17 +1,14 @@
 // 1. Write a program to give a random output between 1 to 10 (AC: 2 simultaneous answers could not be same)
 
-function printRandom() {
-  const randomNumber = Math.floor(Math.random() * 10);
-  return randomNumber;
+const printRandomNumber = () => Math.floor(Math.random() * 10) + 1
+
+const randomNumberOne = printRandomNumber()
+let randomNumberTwo = printRandomNumber()
+
+while(randomNumberOne == randomNumberTwo){
+  randomNumberTwo = printRandomNumber();
 }
 
-const randomNumberOne = printRandom();
-const randomNumberTwo = printRandom();
+console.log(`First random number: ${randomNumberOne}`);
+console.log(`Second random number: ${randomNumberTwo}`);
 
-if (randomNumberOne == randomNumberTwo) {
-  // comparing both number generated from the function.
-  console.log(`Both number is equal`);
-} else {
-  console.log(randomNumberOne);
-  console.log(randomNumberTwo);
-}
