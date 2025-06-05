@@ -30,9 +30,9 @@ const numberOfLines = Number(prompt("Enter the number of lines: "));
 
 const pattern_1 = (numberOfLines) => {
   let num = 1;
-  for (let i = 1; i < numberOfLines; i++) {
+  for (let row = 1; row < numberOfLines; row++) {
     let line = "";
-    for (let j = 0; j < i; j++) {
+    for (let column = 0; column < row; column++) {
       line += num + " ";
       num++;
     }
@@ -42,10 +42,10 @@ const pattern_1 = (numberOfLines) => {
 pattern_1(numberOfLines);
 
 const pattern_2 = (numberOfLines) => {
-  for (let i = 1; i < numberOfLines; i++) {
+  for (let row = 1; row < numberOfLines; row++) {
     let line = "";
-    for (let j = 0; j < i; j++) {
-      line += `${i} `;
+    for (let column = 0; column < row; column++) {
+      line += `${row} `;
     }
     console.log(line);
   }
@@ -53,10 +53,10 @@ const pattern_2 = (numberOfLines) => {
 pattern_2(numberOfLines);
 
 const pattern_3 = (numberOfLines) => {
-  for (let i = numberOfLines; i > 0; i--) {
+  for (let row = numberOfLines; row > 0; row--) {
     let line = "";
     let num = 1;
-    for (let j = 1; j <= i; j++) {
+    for (let column = 1; column <= row; column++) {
       line += num + " ";
       num++;
     }
