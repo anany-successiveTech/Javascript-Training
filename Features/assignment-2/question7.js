@@ -47,10 +47,10 @@ const checkNumber = Number(prompt("Enter Number"));
 const checkFunction = (number) => {
     if (number % 2 == 0) {
     return true;
-  } else {
+  } 
     return false;
-  }
+  
 };
 
 const checkresult = checkFunction(number);
-console.log(checkresult);
+console.log(`The result is : ${checkresult}`);

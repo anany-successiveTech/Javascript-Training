@@ -9,4 +9,4 @@ const sumFunction = (firstNumber, secondNumber) => {
 };
 
 const result = sumFunction(firstNumber, secondNumber);
-console.log(result);
+console.log(`The sum of 1st number and 2nd number is : ${result}`);
