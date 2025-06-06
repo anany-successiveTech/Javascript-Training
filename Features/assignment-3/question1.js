@@ -11,16 +11,20 @@ const operation    = prompt("Enter mathematical operation: ")
 
 switch (operation) {
     case "+":
-        console.log(sum(firstNumber, secondNumber));
+        console.log(`The sum is : ${sum(firstNumber, secondNumber)}`);
         break;
     case "*":
-        console.log(multiply(firstNumber, secondNumber));
+        console.log(`The product of first and second n umber is: ${multiply(firstNumber, secondNumber)}`);
         break;
     case "-":
-        console.log(subtract(firstNumber, secondNumber));
+        console.log(`The difference is: ${subtract(firstNumber, secondNumber)}`);
         break;
     case "/":
-        console.log(divide(firstNumber, secondNumber));
+        if(secondNumber == 0) {
+            console.log(`The denominator can't be 0`);
+            return
+        }
+        console.log(`The dividion is: ${divide(firstNumber, secondNumber)}`);
         break;
     
     default:

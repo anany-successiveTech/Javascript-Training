@@ -11,8 +11,8 @@ const printEvenAndOdd = (limit) => {
             odd += `${i} `
         }
     }
-    console.log(`Even: ${even}`);
-    console.log(`Odd: ${odd}`);
+    console.log(`The Even: ${even}`);
+    console.log(`The Odd: ${odd}`);
     
     
 }

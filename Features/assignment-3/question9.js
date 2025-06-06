@@ -10,7 +10,7 @@ const fibonacci = (n) => {
 
 const printFibonacci = (count) => {
   for (let i = 0; i < count; i++) {
-    console.log(fibonacci(i));
+    console.log(`The fibonacci series : ${fibonacci(i)}`);
   }
 };
 
