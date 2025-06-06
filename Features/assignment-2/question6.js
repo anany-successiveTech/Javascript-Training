@@ -5,10 +5,11 @@ const number = Number(prompt("Enter Number"));
 const checkFunction = function (number) {
   if (number % 2 == 0) {
     return true;
-  } else {
+  } 
     return false;
-  }
+  
 };
 
 const result = checkFunction(number);
-console.log(result);
+console.log(`The sum of first and second number: ${result}`);
+

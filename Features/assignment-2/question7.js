@@ -36,7 +36,7 @@ const secondNumber = Number(prompt("Enter Second Number"));
 const sumFunction = (firstNumber, secondNumber) => firstNumber + secondNumber;
 
 const result = sumFunction(firstNumber, secondNumber);
-console.log(result);
+console.log(`The sum of first and second number: ${result}`);
 
 
 //  Question -> 6
