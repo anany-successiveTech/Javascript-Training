@@ -13,7 +13,7 @@ const removeDuplicates = (inputString) => {
       outputString += item
     
   }
-   console.log(outputString);
+   console.log(`The unique charactor string is: ${outputString}`);
 };
 
-removeDuplicates('Hello Yellow');
+removeDuplicates(inputString);

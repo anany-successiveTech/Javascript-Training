@@ -10,7 +10,7 @@ const printPrimeNumber = () => {
       }
     }
     if (isPrime) {
-      console.log(num);
+      console.log(`The prime number is: ${num}`);
     }
   }
 };
