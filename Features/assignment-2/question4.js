@@ -2,7 +2,7 @@
 
 const number = Number(prompt("Enter number: "));
 
-const squareOfNumber = function (number) {
+const squareOfNumber = (number) => {
   const squaredNumber = number * number;
   alert(squaredNumber);
   return squareOfNumber;

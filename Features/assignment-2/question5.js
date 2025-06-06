@@ -3,7 +3,7 @@
 const firstNumber = Number(prompt("Enter First Number"));
 const secondNumber = Number(prompt("Enter Second Number"));
 
-const sumFunction = function (firstNumber, secondNumber) {
+const sumFunction = (firstNumber, secondNumber) => {
   const sum = firstNumber + secondNumber;
   return sum;
 };
