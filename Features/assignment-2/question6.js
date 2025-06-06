@@ -11,4 +11,4 @@ const checkFunction = function (number) {
 };
 
 const result = checkFunction(number);
-console.log(result);
+console.log(`The sum of first and second number is: ${result}`)

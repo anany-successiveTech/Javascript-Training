@@ -1,7 +1,7 @@
-// 4. Write a program to print all even number first and then all odd numbers
+// 4. Write a program to print all even number first and then all odd numbers.
 
 const printingLimit = Number(prompt("Enter the printing limit: "))
-const printEvenAndOdd = () => {
+const printEvenAndOdd = (printingLimit) => {
     for(let i=0; i<printingLimit; i++){
         if(i % 2 == 0) {console.log(`The even numbers: ${i} `)}
     }
