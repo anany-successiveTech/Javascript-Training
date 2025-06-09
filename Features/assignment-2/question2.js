@@ -8,12 +8,11 @@ const getUserDetails = () =>  {
     nameOfUser = prompt("Enter Name: ");
   }
 
-  
-  let ageOfUser = prompt("Enter your age: ");
-  if (!ageOfUser || !/^\d+$/.test(ageOfUser) || Number(ageOfUser) <= 0 || Number(ageOfUser) > 100) {
-    alert("Invalid age. Please enter a number between 1 and 120.");
-    ageOfUser = prompt("Enter your age: ");
-  }
+ let ageOfUser = prompt("Enter your age: ");
+if (isNaN(ageOfUser) || Number(ageOfUser) < 1 || Number(ageOfUser) > 100) {
+  alert("Invalid age. Please enter a number between 1 and 100.");
+  ageOfUser = prompt("Enter your age: ");
+}
 
   
   let contactOfUser = prompt("Enter your Phone Number: ");
