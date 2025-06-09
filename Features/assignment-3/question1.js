@@ -7,7 +7,7 @@ const subtract = (firstNumber, secondNumber) => (firstNumber - secondNumber)
 
 const firstNumber  = Number(prompt("Enter first number: "))
 const secondNumber = Number(prompt("Enter second number: "))
-const operation    = prompt("Enter mathematical operation: ")
+const operation    = prompt("Enter mathematical operation ('+', '-', '*', '/'): ")
 
 switch (operation) {
     case "+":

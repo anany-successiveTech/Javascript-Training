@@ -2,6 +2,7 @@
 
 const printingLimit = Number(prompt("Enter the printing limit: "))
 const printEvenAndOdd = (printingLimit) => {
+    
     for(let i=0; i<printingLimit; i++){
         if(i % 2 == 0) {console.log(`The even numbers: ${i} `)}
     }
