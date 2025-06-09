@@ -14,17 +14,14 @@ const callBack = () => {
 
 mainFunction(callBack);
 
+
 // Question -> 4
 // 4. Write a function expression that takes in a number and returns its square.
 
-const num = Number(prompt("Enter number: "));
+const userInput = Number(prompt("Enter number: "));
 
-const squareOfNumber = (num) => {
-  const squaredNumber = num * num;
-  return squaredNumber;
-};
-
-const result = squareOfNumber();
+const calculateSquare = (num) => (num*num)
+const result = calculateSquare(userInput);
 console.log(`Square of a given number is: ${result}`)
 
 
@@ -56,3 +53,4 @@ const checkFunction = (number) => {
 
 const checkresult = checkFunction(number);
 console.log(`The result is : ${checkresult}`);
+
