@@ -1,19 +1,12 @@
-// 1. Write a program to remove duplicate charecters from a string ("Hello Yellow" => "Helo Yw")
+// 5. Write a function expression that takes in two numbers and returns their sum.
 
-const inputString = prompt("Enter the string: ")
-let outputString = ''
-const removeDuplicates = (inputString) => {
-  const set = new Set();
-   
-  for (let i = 0; i < inputString.length; i++) {
-    set.add(inputString[i]);
-  }
+const firstNumber = Number(prompt("Enter First Number"));
+const secondNumber = Number(prompt("Enter Second Number"));
 
-  for (let item of set) {
-      outputString += item
-    
-  }
-   console.log(`The unique charactor String is: ${outputString}`);
+const sumFunction = (firstNumber, secondNumber) => {
+  const sum = firstNumber + secondNumber;
+  return sum;
 };
 
-removeDuplicates(inputString);
+const result = sumFunction(firstNumber, secondNumber);
+console.log(`The sum of 1st number and 2nd number is : ${result}`);
