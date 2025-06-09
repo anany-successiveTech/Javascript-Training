@@ -17,15 +17,16 @@ mainFunction(callBack);
 // Question -> 4
 // 4. Write a function expression that takes in a number and returns its square.
 
-const number = Number(prompt("Enter number: "));
+const userInput = Number(prompt("Enter number: "));
 
-const squareOfNumber = (number) => {
-  const squaredNumber = number * number;
-  alert(squaredNumber);
-  return squaredNumber;  
+const calculateSquare = (num) => {
+  const squaredNumber = num * num;
+  return squaredNumber;
 };
 
-squareOfNumber(number);
+const finalResult = calculateSquare(userInput);
+console.log(`Square of a given number is: ${finalResult}`)
+
 
 //  Question -> 5
 // 5. Write a function expression that takes in two numbers and returns their sum.

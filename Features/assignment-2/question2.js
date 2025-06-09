@@ -23,10 +23,7 @@ if (isNaN(ageOfUser) || Number(ageOfUser) < 1 || Number(ageOfUser) > 100) {
 
   
   const userDetails = `Name: ${nameOfUser.trim()}\nAge: ${ageOfUser}\nPhone Number: ${contactOfUser.trim()}`;
-
-  
-  alert(userDetails);
-  console.log(userDetails);
+  console.log(`Details of user is: \n\n${userDetails}`);
 }
 
 

@@ -2,7 +2,7 @@
 
 const userInput = Number(prompt("Enter number: "));
 
-const calculateSquare = function (num) {
+const calculateSquare = (num) => {
   const squaredNumber = num * num;
   return squaredNumber;
 };
