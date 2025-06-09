@@ -1,14 +1,14 @@
 // 6. Write a function expression that takes in a number and returns true if it's even and false if it's odd.
 
-const number = Number(prompt("Enter Number"));
+const userInput = Number(prompt("Enter Number"));
 
-const checkFunction = function (number) {
-  if (number % 2 == 0) {
+const checkFunction = (num) => {
+  if (num % 2 == 0) {
     return true;
-  } else {
+  } 
     return false;
-  }
+  
 };
 
-const result = checkFunction(number);
-console.log(`The sum of first and second number is: ${result}`)
+const result = checkFunction(userInput);
+console.log(`The sum of first and second number: ${result}`);

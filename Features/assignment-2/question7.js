@@ -3,7 +3,7 @@
 // Question -> 3
 // 3. Write a function expression that takes in another function as an argument
 
-const mainFunction = (newCallBack) => {
+const main = (newCallBack) => {
   console.log(`hello this is main function`);
   newCallBack();
 };
@@ -14,18 +14,17 @@ const callBack = () => {
 
 mainFunction(callBack);
 
+
 // Question -> 4
 // 4. Write a function expression that takes in a number and returns its square.
 
-const number = Number(prompt("Enter number: "));
+const userInput = Number(prompt("Enter number: "));
 
-const squareOfNumber = (number) => {
-  const squaredNumber = number * number;
-  alert(squaredNumber);
-  return squaredNumber;  
-};
+const calculateSquare = (num) => (num*num)
+const result = calculateSquare(userInput);
+console.log(`Square of a given number is: ${result}`)
 
-squareOfNumber(number);
+
 
 //  Question -> 5
 // 5. Write a function expression that takes in two numbers and returns their sum.
@@ -35,8 +34,8 @@ const secondNumber = Number(prompt("Enter Second Number"));
 
 const sumFunction = (firstNumber, secondNumber) => firstNumber + secondNumber;
 
-const result = sumFunction(firstNumber, secondNumber);
-console.log(`The sum of first and second number is: ${result}`)
+const sumResult = sumFunction(firstNumber, secondNumber);
+console.log(`The sum of first and second number: ${sumResult}`);
 
 
 //  Question -> 6
