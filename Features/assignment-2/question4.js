@@ -1,9 +1,9 @@
 // 4. Write a function expression that takes in a number and returns its square.
 
-const number = Number(prompt("Enter number: "));
+const num = Number(prompt("Enter number: "));
 
-const squareOfNumber = function (number) {
-  const squaredNumber = number * number;
+const squareOfNumber = (num) => {
+  const squaredNumber = num * num;
   return squaredNumber;
 };
 

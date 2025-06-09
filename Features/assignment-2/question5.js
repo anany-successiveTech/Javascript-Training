@@ -8,5 +8,5 @@ const sumFunction = (firstNumber, secondNumber) => {
   return sum;
 };
 
-const result = sumFunction(firstNumber, secondNumber);
-console.log(`The sum of 1st number and 2nd number is : ${result}`);
+const finalResult = sumFunction(firstNumber, secondNumber);
+console.log(`The sum of 1st number and 2nd number is : ${finalResult}`);
