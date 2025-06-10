@@ -1,13 +1,13 @@
 // 1. Write a program to perform functionality of a calculator (add,sub,multiply,divide)
 
-const sum      = (firstNumber, secondNumber) => (firstNumber + secondNumber)
-const multiply = (firstNumber, secondNumber) => (firstNumber * secondNumber)
-const divide   = (firstNumber, secondNumber) => (firstNumber / secondNumber)
-const subtract = (firstNumber, secondNumber) => (firstNumber - secondNumber)
+const sum      = (number1, number2) => (number1 + number2);
+const multiply = (number1, number2) => (number1 * number2);
+const divide   = (number1, number2) => (number1 / number2);
+const subtract = (number1, number2) => (number1 - number2);
 
-const firstNumber  = Number(prompt("Enter first number: "))
-const secondNumber = Number(prompt("Enter second number: "))
-const operation    = prompt("Enter mathematical operation ('+', '-', '*', '/'): ")
+const firstNumber  = Number(prompt("Enter first number: "));
+const secondNumber = Number(prompt("Enter second number: "));
+const operation    = prompt("Enter mathematical operation ('+', '-', '*', '/'): ");
 
 switch (operation) {
     case "+":
@@ -30,4 +30,4 @@ switch (operation) {
     default:
         console.log(`Random`);
         
-}
+};

@@ -3,15 +3,16 @@
 
 console.log("Using for loop:");
 for (let i = 1; i <= 20; i++) {
+  
   console.log(i);
-}
+};
 
 console.log("\nUsing while loop:");
 let j = 1;
 while (j <= 20) {
   console.log(j);
   j++;
-}
+};
 
 console.log("\nUsing do...while loop:");
 let k = 1;

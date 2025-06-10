@@ -1,17 +1,23 @@
 // 9. Write a program to print fibonaaci series
 
-const fibonacci = (n) => {
-  if (n < 2) {
-    return n;
+const userInput = Number(prompt("Enter the no. of terms: "));
+const fibonacci = (term) => {
+
+  if (term < 2) {
+    return term;
   } else {
-    return fibonacci(n - 1) + fibonacci(n - 2);
-  }
+    return fibonacci(term - 1) + fibonacci(term - 2);
+  };
 };
 
 const printFibonacci = (count) => {
+  let fibonacciSequence = '';
   for (let i = 0; i < count; i++) {
-    console.log(`The fibonacci series : ${fibonacci(i)}`);
-  }
+    fibonacciSequence += `${fibonacci(i)} `;
+  };
+  return fibonacciSequence;
 };
 
-printFibonacci(10);  // Prints first 10 Fibonacci numbers
+const finalSeries = printFibonacci(userInput);  
+console.log(`The fibonacci series is ; ${finalSeries}`);
+

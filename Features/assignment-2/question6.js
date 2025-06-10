@@ -11,4 +11,5 @@ const checkFunction = (num) => {
 };
 
 const result = checkFunction(userInput);
-console.log(`The sum of first and second number: ${result}`);
+console.log(`The ${result ? 'Even' : ' Odd'}`);
+

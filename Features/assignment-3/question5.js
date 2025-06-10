@@ -1,20 +1,18 @@
 // 5. Write a program to print all even number first and then all odd numbers using only one iteration
 
-const limit = Number(prompt("Enter the limit: "));
+const printingLimit = Number(prompt("Enter the limit: "));
 const printEvenAndOdd = (limit) => {
-    let even = ""
-    let odd  = ""
-    for(let i=0; i<= limit; i++){
-        if(i % 2 == 0){
-            even += `${i} `
-        }else{
-            odd += `${i} `
-        }
+  let even = "";
+  let odd = "";
+  for (let i = 0; i <= limit; i++) {
+    if (i % 2 == 0) {
+      even += `${i} `;
+    } else {
+      odd += `${i} `;
     }
-    console.log(`The Even: ${even}`);
-    console.log(`The Odd: ${odd}`);
-    
-    
-}
+  }
+  console.log(`The Even: ${even}`);
+  console.log(`The Odd: ${odd}`);
+};
 
-printEvenAndOdd(limit)
+printEvenAndOdd(printingLimit);

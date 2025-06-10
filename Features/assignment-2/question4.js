@@ -1,11 +1,7 @@
 // 4. Write a function expression that takes in a number and returns its square.
 
-const num = Number(prompt("Enter number: "));
+const userInput = Number(prompt("Enter number: "));
 
-const squareOfNumber = (num) => {
-  const squaredNumber = num * num;
-  return squaredNumber;
-};
-
-const result = squareOfNumber(number);
+const calculateSquare = (num) => (num*num)
+const result = calculateSquare(userInput);
 console.log(`Square of a given number is: ${result}`)

@@ -32,7 +32,7 @@ console.log(`Square of a given number is: ${result}`)
 const firstNumber = Number(prompt("Enter First Number"));
 const secondNumber = Number(prompt("Enter Second Number"));
 
-const sumFunction = (firstNumber, secondNumber) => firstNumber + secondNumber;
+const sumFunction = (firstNumber, secondNumber) => (firstNumber + secondNumber);
 
 const sumResult = sumFunction(firstNumber, secondNumber);
 console.log(`The sum of first and second number: ${sumResult}`);
