@@ -1,7 +1,7 @@
 // 4. Write a program to convert given string to upperCase OR lowerCase
 
-const inputString = prompt("Enter the string: ")
-const caseConverting = (inputString) => {
+const userInput = prompt("Enter the string: ")
+const caseConvertor = (inputString) => {
     
     const upperCase = inputString.toUpperCase()
     const lowerCase = inputString.toLocaleLowerCase()
@@ -9,4 +9,4 @@ const caseConverting = (inputString) => {
     console.log(`Lower case conversion: ${lowerCase}`);
 
 }
-caseConverting(inputString)
+caseConvertor(userInput)

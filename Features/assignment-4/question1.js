@@ -1,19 +1,20 @@
 // 1. Write a program to remove duplicate charecters from a string ("Hello Yellow" => "Helo Yw")
 
-const inputString = prompt("Enter the string: ")
-let outputString = ''
+const userInput = prompt("Enter the string: ");
+let outputString = "";
+
 const removeDuplicates = (inputString) => {
   const set = new Set();
-   
+
   for (let i = 0; i < inputString.length; i++) {
     set.add(inputString[i]);
   }
 
   for (let item of set) {
-      outputString += item
-    
+    outputString += item;
   }
-   console.log(`The unique charactor string is: ${outputString}`);
+  return outputString
 };
+const finalResutl = removeDuplicates(userInput);
+console.log(`The unique charactor string is: ${finalResutl}`);
 
-removeDuplicates(inputString);

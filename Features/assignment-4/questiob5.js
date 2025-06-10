@@ -4,7 +4,7 @@ let inputString = prompt("Enter the input string: ")
 inputString = inputString.trim()
 
 
-const camelCaseConvertor = (inputString) => {
+const camelCaseConvertor = (input) => {
     let resultString = ''
     for(let i=0; i<inputString.length; i++){
 

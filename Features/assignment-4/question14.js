@@ -1,26 +1,19 @@
 // 14. Write a program to reverse an array
 
-// 14. Write a program to reverse an array
+const inputString = prompt("Enter the element of array (comma-separated): ");
+let array = [];
 
-const sizeOfArray = Number(prompt("Enter the size of array: "));
+const reverseArray = (input) => {
+  array = input.split(",").map((item) => Number(item.trim()));
 
-const reverseArray = (size) => {
-  let arr = [];
-  for (let i = 0; i < size; i++) {
-    const element = prompt(`Enter element ${i + 1}: `);
-    arr.push(element);
-  }
-
-  
   let reversed = [];
-  for (let i = size - 1; i >= 0; i--) {
-    reversed.push(arr[i]);
+  for (let i = array.length - 1; i >= 0; i--) {
+    reversed.push(array[i]);
   }
 
   return reversed;
 };
 
-const reversedArr = reverseArray(sizeOfArray);
+const reversedArr = reverseArray(inputString);
 console.log("Reversed array:", reversedArr);
 alert("Reversed array: " + reversedArr.join(", "));
-

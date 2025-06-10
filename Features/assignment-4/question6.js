@@ -1,12 +1,10 @@
 // 6. Write a program to find sum of an array
 
 const sizeOfArray = Number(prompt("Enter the size of array: "));
-const arraySummation = (sizeOfArray) => {
-
+const arraySummation = (size) => {
   let array = [];
-  
-  for (let i = 0; i < sizeOfArray; i++) {
 
+  for (let i = 0; i < size; i++) {
     const arrayElement = Number(prompt("Enter the element: "));
     array.push(arrayElement);
   }

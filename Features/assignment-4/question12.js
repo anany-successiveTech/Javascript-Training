@@ -1,29 +1,27 @@
 // 12. Write a program to display intersection of two array
 
-const sizeOfArray1 = Number(prompt("Enter the size of first array: "));
-const array1 = [];
+const inputStringOne = prompt("Enter the element of first array (comma-separated): ")
+const inputStringTwo = prompt("Enter the element of first array (comma-separated): ")
 
-for (let i = 0; i < sizeOfArray1; i++) {
-  const element = Number(prompt(`Enter element ${i + 1} for first array:`));
-  array1.push(element);
-}
+console.log(` `);
 
-const sizeOfArray2 = Number(prompt("Enter the size of second array: "));
-const array2 = [];
+let intersectionArray = [];
 
-for (let i = 0; i < sizeOfArray2; i++) {
-  const element = Number(prompt(`Enter element ${i + 1} for second array:`));
-  array2.push(element);
-}
+const arrayIntersection = (inputOne, inputTwo) => {
 
-const set1 = new Set(array1);
-const intersection = [];
+const array1 = inputOne.split(",").map(item => Number(item.trim()))
+const array2 = inputTwo.split(",").map(item => Number(item.trim()))
 
-for (const elem of array2) {
-  if (set1.has(elem)) {
-    intersection.push(elem);
-    set1.delete(elem);
+const mySet = new Set(array1);
+
+for (const element of array2) {
+  if (mySet.has(element)) {
+    intersectionArray.push(element);
+    mySet.delete(element);
   }
 }
+return intersectionArray
+}
 
-console.log("Intersection of the two arrays is:", intersection);
+const commonElementArray = arrayIntersection(inputStringOne, inputStringTwo)
+console.log(`Common elements from  first and second array is: ${commonElementArray}`);
