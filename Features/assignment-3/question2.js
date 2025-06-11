@@ -26,50 +26,52 @@
 // 1 2 3 4
 // 1 2 3 4 5
 
+
+
 const numberOfLines = Number(prompt("Enter the number of lines: "));
 
-const pattern_1 = (numberOfLines) => {
+const pattern_1 = (lines) => {
   let num = 1;
-  for (let row = 1; row < numberOfLines; row++) {
-    let line = "";
+  for (let row = 1; row <= lines; row++) {
+    let patternLine = "";
     for (let column = 0; column < row; column++) {
-      line += num + " ";
+      patternLine += num + " ";
       num++;
     }
-    console.log(line);
-  }
+    console.log(patternLine);
+  };
 };
 pattern_1(numberOfLines);
 
-const pattern_2 = (numberOfLines) => {
-  for (let row = 1; row < numberOfLines; row++) {
-    let line = "";
+const pattern_2 = (lines) => {
+  for (let row = 1; row < lines; row++) {
+    let patternLine = "";
     for (let column = 0; column < row; column++) {
-      line += `${row} `;
+      patternLine += `${row} `;
     }
-    console.log(line);
-  }
+    console.log(patternLine);
+  };
 };
 pattern_2(numberOfLines);
 
-const pattern_3 = (numberOfLines) => {
-  for (let row = numberOfLines; row > 0; row--) {
-    let line = "";
+const pattern_3 = (lines) => {
+  for (let row = lines; row > 0; row--) {
+    let patternLine = "";
     let num = 1;
     for (let column = 1; column <= row; column++) {
-      line += num + " ";
+      patternLine += num + " ";
       num++;
-    }
-    console.log(line);
-  }
+    };
+    console.log(patternLine);
+  };
   for (let i = 2; i <= numberOfLines; i++) {
-    let line = "";
+    let patternLine = "";
     let num = 1;
     for (let j = 1; j <= i; j++) {
-      line += num + " ";
+      patternLine += num + " ";
       num++;
-    }
-    console.log(line);
-  }
+    };
+    console.log(patternLine);
+  };
 };
 pattern_3(numberOfLines);

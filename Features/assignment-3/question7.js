@@ -5,4 +5,4 @@ let num = 2;
 while (num <= 4096) {
   console.log(`The number is: ${num}`);
   num *= 2;  
-}
+};

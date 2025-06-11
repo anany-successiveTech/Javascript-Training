@@ -1,18 +1,23 @@
-// 9. Write a program to print fibonaaci series.
+// 9. Write a program to print fibonaaci series
 
-const limit = Number(prompt("Enter the limit: "))
-const fibonacci = (limit) => {
-  if (limit < 2) {
-    return limit;
+const userInput = Number(prompt("Enter the no. of terms: "));
+const fibonacci = (term) => {
+
+  if (term < 2) {
+    return term;
   } else {
-    return fibonacci(limit - 1) + fibonacci(limit- 2);
-  }
+    return fibonacci(term - 1) + fibonacci(term - 2);
+  };
 };
 
 const printFibonacci = (count) => {
+  let fibonacciSequence = '';
   for (let i = 0; i < count; i++) {
-    console.log(`The fibonacci series is: ${fibonacci(i)}`);
-  }
+    fibonacciSequence += `${fibonacci(i)} `;
+  };
+  return fibonacciSequence;
 };
 
-printFibonacci(limit); 
+const finalSeries = printFibonacci(userInput);  
+console.log(`The fibonacci series is ; ${finalSeries}`);
+
