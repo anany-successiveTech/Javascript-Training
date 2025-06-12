@@ -7,11 +7,11 @@ const printPrimeNumber = () => {
       if (num % i === 0) {
         isPrime = false;
         break;
-      }
-    }
+      };
+    };
     if (isPrime) {
-      console.log(`The prime number is: ${num}`);
-    }
-  }
+      console.log(`The prime is: ${num}`);
+    };
+  };
 };
-printPrimeNumber()
+printPrimeNumber();

@@ -2,10 +2,6 @@
 
 const userInput = Number(prompt("Enter number: "));
 
-const calculateSquare = (num) => {
-  const squaredNumber = num * num;
-  return squaredNumber;
-};
-
-const finalResult = calculateSquare(userInput);
-console.log(`Square of a given number is: ${finalResult}`)
+const calculateSquare = (num) => (num*num)
+const result = calculateSquare(userInput);
+console.log(`Square of a given number is: ${result}`)
