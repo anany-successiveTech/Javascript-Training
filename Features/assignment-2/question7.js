@@ -19,24 +19,12 @@ mainFunction(callBack);
 // 4. Write a function expression that takes in a number and returns its square.
 
 const userInput = Number(prompt("Enter number: "));
-<<<<<<< HEAD
-
-const calculateSquare = (num) => {
-  const squaredNumber = num * num;
-  return squaredNumber;
-};
-
-const finalResult = calculateSquare(userInput);
-console.log(`Square of a given number is: ${finalResult}`)
-
-=======
 
 const calculateSquare = (num) => (num*num)
 const result = calculateSquare(userInput);
 console.log(`Square of a given number is: ${result}`)
 
 
->>>>>>> d002e5dbf445107f08aa88a8ed52a43c37f9138e
 
 //  Question -> 5
 // 5. Write a function expression that takes in two numbers and returns their sum.
@@ -46,13 +34,8 @@ const secondNumber = Number(prompt("Enter Second Number"));
 
 const sumFunction = (firstNumber, secondNumber) => (firstNumber + secondNumber);
 
-<<<<<<< HEAD
-const result = sumFunction(firstNumber, secondNumber);
-console.log(`The sum of first and second number: ${result}`);
-=======
 const sumResult = sumFunction(firstNumber, secondNumber);
 console.log(`The sum of first and second number: ${sumResult}`);
->>>>>>> d002e5dbf445107f08aa88a8ed52a43c37f9138e
 
 
 //  Question -> 6
@@ -69,8 +52,4 @@ const checkFunction = (number) => {
 };
 
 const checkresult = checkFunction(number);
-<<<<<<< HEAD
-console.log(`The result is: ${checkresult}`);
-=======
 console.log(`The result is : ${checkresult}`);
->>>>>>> d002e5dbf445107f08aa88a8ed52a43c37f9138e
