@@ -1,9 +1,9 @@
 // 14. Write a program to reverse an array
 
 const inputString = prompt("Enter the element of array (comma-separated): ");
-let array = [];
 
 const reverseArray = (input) => {
+  let array = [];
   array = input.split(",").map((item) => Number(item.trim()));
 
   let reversed = [];

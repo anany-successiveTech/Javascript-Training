@@ -1,10 +1,9 @@
 // 11. Write a program to sort an array (bubble sort)
 
 const inputString = prompt("Enter the element of array (comma-separated): ")
-let array = [];
 
 const bubbleSortArray = (input) => {
- 
+ let array = [];
  array = input.split(",").map(item => Number(item.trim()))
 
   for (let i = 0; i < array.length - 1; i++) {
