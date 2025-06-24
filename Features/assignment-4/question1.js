@@ -1,9 +1,9 @@
 // 1. Write a program to remove duplicate charecters from a string ("Hello Yellow" => "Helo Yw")
 
 const userInput = prompt("Enter the string: ");
-let outputString = "";
 
 const removeDuplicates = (inputString) => {
+  let outputString = "";
   const set = new Set();
 
   for (let i = 0; i < inputString.length; i++) {

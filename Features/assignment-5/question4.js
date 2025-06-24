@@ -16,8 +16,13 @@ const object = {
 
 const deepClone = (obj) => {
   const newObject = JSON.parse(JSON.stringify(obj));
+  newObject.name = 'Abhishek'
+  // console.log(obj);
+  
+  
   return newObject;
 };
 
 const deepClonedObject = deepClone(object);
+console.log(object);
 console.log("The deep clone is: ", deepClonedObject);

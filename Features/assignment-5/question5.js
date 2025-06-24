@@ -8,7 +8,7 @@
 
 const object = {
   a: 1,
-  b: { c: 2, d: [3, 4] },
+  b: { c: 2, d: {x:[3, 4], y:{z:10}} },
 };
 
 let newkey = "";
