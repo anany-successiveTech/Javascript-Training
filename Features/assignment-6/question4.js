@@ -8,11 +8,11 @@ class Person {
     this.age = age;
   }
 
-  fullName(firstName, lastName) {
-    return firstName + lastName;
+  fullName() {
+    return this.firstName + ' ' + this.lastName;
   }
 
-  averageAge(personsObject) {
+  static averageAge(personsObject) {
    
     const totalAge = personsObject.reduce((sum, person) => {
       return sum + person.age;
@@ -23,15 +23,15 @@ class Person {
 };
 
 const personsArray = [
-  new Person("Aryan", "Thapak", 22),
-  new Person("Manoj", "Kumar", 27),
-  new Person("Anva", "Raut", 20),
+  new Person("Aryan", "Thapak", 20),
+  new Person("Manoj", "Kumar", 25),
+  new Person("Anva", "Raut", 30),
 ];
 
 const person_1 = new Person("Aditi", "More", 19);
-const printFullName = person_1.fullName('Anany', 'More');
+const printFullName = person_1.fullName();
 
-const averageAgeResult = person_1.averageAge(personsArray);
+const averageAgeResult = Person.averageAge(personsArray);
 console.log(`The average age of persons is: ${averageAgeResult}`);
 console.log(`Full name of the person is: ${printFullName}`);
 

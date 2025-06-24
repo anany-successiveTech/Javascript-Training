@@ -25,4 +25,7 @@ class Student extends Person {
 
 const student = new Student("Anany More", 23, "Mathematics and Computing");
 const finalResult = student.greeting();
+const person = new Person('Mahesh', 34)
+const newOutput = person.greeting()
 console.log(`The information about student: ${finalResult}`);
+console.log(`The new person: ${newOutput}`)

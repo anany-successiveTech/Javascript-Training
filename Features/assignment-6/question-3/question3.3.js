@@ -8,7 +8,8 @@ class Person {
   }
 
   farewell() {
-    return `Goodbye ${this.name}. Thank you for teaching ${this.subjectsTaught} and inspiring your students!`;
+    
+    return `Goodbye ${this.name}`; 
   }
 };
 
@@ -16,6 +17,9 @@ class Teacher extends Person {
   constructor(name, age, subjectTaught) {
     super(name, age);
     this.subjectTaught = subjectTaught;
+  }
+  farewell(){
+   return `${super.farewell()} Thankyou, ${this.subjectTaught}`;
   }
 };
 

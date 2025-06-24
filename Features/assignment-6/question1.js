@@ -17,7 +17,7 @@ class BankAccount {
   }
 
   withdraw(amount) {
-    if (amount > 0 && amount < this.balance) {
+    if (amount > 0 && amount <= this.balance) {
       this.balance -= amount;
       console.log(`${this.owner} withdrew: ${amount}`);
       console.log(`Your balance is : ${this.balance}`);
@@ -31,7 +31,7 @@ class BankAccount {
   }
 };
 
-const myAccount = new BankAccount("Anany more", 500000);
+const myAccount = new BankAccount("Anany more", 50000);
 myAccount.deposite(1000);
 myAccount.withdraw(50000);
 myAccount.displayBalance();
