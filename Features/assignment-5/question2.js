@@ -8,8 +8,16 @@ const users = [
   { name: "Devashri", age: 45, id: 5 },
 ];
 
-users.sort((a, b) => a.age - b.age);
+const sortArray = (inputArray) => {
+  for (let i = 0; i < inputArray.length - 1; i++) {
+    for (let j = 0; j < inputArray.length - 1 - i; j++) {
+      if (inputArray[j].age > inputArray[j + 1].age) {
+        [inputArray[j], inputArray[j + 1]] = [inputArray[j + 1], inputArray[j]];
+      }
+    }
+  }
+  return inputArray;
+};
 
+const result = sortArray(users);
 console.log("The sorted array of users based on age (ascending order):", users);
-
-

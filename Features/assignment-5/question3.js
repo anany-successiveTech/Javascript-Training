@@ -7,12 +7,12 @@ const users = [
   { name: "John", age: 25, id: 4 },
 ];
 
-const removeAllId = (array) => {
-  array.forEach((user) => {
-    delete user.id;
+const removeIdWithMap = (inputArray) => {
+  const newArray = inputArray.map((user) => {
+    return { name: user.name, age: user.age };
   });
-  return array;
+  return newArray;
 };
 
-const updatedUsers = removeAllId(users);
-console.log("The user without are: ", updatedUsers);
+const userWithoutId = removeIdWithMap(users);
+console.log("The user without id are: ", userWithoutId);

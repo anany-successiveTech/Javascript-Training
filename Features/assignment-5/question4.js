@@ -1,6 +1,6 @@
 // 4. Write a program deepClone that takes an object as input and returns a deep copy of that object. The function should handle nested objects and arrays.
 
-const object = {
+const userObject = {
   name: "Anany",
   age: 23,
   address: "Noida",
@@ -16,13 +16,8 @@ const object = {
 
 const deepClone = (obj) => {
   const newObject = JSON.parse(JSON.stringify(obj));
-  newObject.name = 'Abhishek'
-  // console.log(obj);
-  
-  
   return newObject;
 };
 
-const deepClonedObject = deepClone(object);
-console.log(object);
+const deepClonedObject = deepClone(userObject);
 console.log("The deep clone is: ", deepClonedObject);
