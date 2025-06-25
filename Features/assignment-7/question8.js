@@ -6,7 +6,7 @@ const urls = {
   weather: "https://api.open-meteo.com/v1/forecast?latitude=35&longitude=139&hourly=temperature_2m",
 };
 
-async function fetchDataParallel() {
+const fetchDataParallel = async () => {
   try {
     const [postRes, catRes, weatherRes] = await Promise.all([
       fetch(urls.post), 
