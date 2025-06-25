@@ -1,27 +1,29 @@
 // 8. Create a function that fetches data from multiple APIs in parallel and then performs some operation on the combined data, using async/await.
 
-async function fetchData() {
-  const catFactUrl = 'https://catfact.ninja/fact';
-  const activityUrl = 'https://www.boredapi.com/api/activity';
-  const ageUrl = 'https://api.agify.io?name=alex';
-  const genderUrl = 'https://api.genderize.io?name=alex';
+const urls = {
+  post: "https://jsonplaceholder.typicode.com/posts/1",
+  catFact: "https://catfact.ninja/fact",
+  weather: "https://api.open-meteo.com/v1/forecast?latitude=35&longitude=139&hourly=temperature_2m",
+};
 
-  const res1 = await fetch(catFactUrl);
-  const catFact = await res1.json();
+async function fetchDataParallel() {
+  try {
+    const [postRes, catRes, weatherRes] = await Promise.all([
+      fetch(urls.post), 
+      fetch(urls.catFact),
+      fetch(urls.weather),
+    ]);
 
-  const res2 = await fetch(activityUrl);
-  const activity = await res2.json();
+    const post = await postRes.json();
+    const catFact = await catRes.json();
+    const weather = await weatherRes.json();
 
-  const res3 = await fetch(ageUrl);
-  const age = await res3.json();
-
-  const res4 = await fetch(genderUrl);
-  const gender = await res4.json();
-
-  console.log("Cat Fact:", catFact.fact);
-  console.log("Activity:", activity.activity);
-  console.log("Predicted Age:", age.age);
-  console.log("Predicted Gender:", gender.gender);
+    console.log("Post Title:", post.title);
+    console.log("Cat Fact:", catFact.fact);
+    console.log("Current Temp (°C):", weather.hourly.temperature_2m[0]);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
 }
 
-fetchData();
+fetchDataParallel();
