@@ -2,17 +2,26 @@
 
 // 1. Give an example of using a callback function to handle an asynchronous operation in JavaScript (Use any open api to make a call)
 
-const multipleCallbacks = (startCallback, successCallback, errorCallback) => {
-  startCallback(); 
+const multiple = (onStart, onSuccess, onError) => {
+  try {
+    onStart();
 
-  fetch("https://catfact.ninja/fact")
-    .then((res) => res.json())
-    .then((data) => successCallback(data))
-    .catch((error) => errorCallback(error));
+    fetch("https://catfact.ninja/fact")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Something went wrong: ${res.status}`);
+        }
+        return res.json();
+      })
+      .then((data) => onSuccess(data))
+      .catch((error) => onError(error));
+  } catch (error) {
+    onError(error);
+  }
 };
 
-multipleCallbacks(
-  () => console.log("Starting the execution"), // callback one;
-  (data) => console.log(`Data fetched successfully: ${data.fact}`), // callback two;
-  (error) => console.log(`Error in getting data: ${error}`) // callback three;
+multiple(
+  () => console.log("Starting the execution"),
+  (data) => console.log(`Data fetched successfully: ${data.fact}`),
+  (error) => console.log(`${error}`)
 );

@@ -6,14 +6,23 @@ const fetchData = (callback) => {
   }, 1000);
 };
 
-const fetchDataPromise = () =>
+const handleFetch = () =>
   new Promise((resolve, reject) => {
     fetchData((err, data) => {
       if (err) reject(err);
-      else resolve(data);
+      resolve(data);
     });
   });
 
-fetchDataPromise()
-  .then((data) => console.log("Success:", data))
-  .catch((err) => console.log("Error:", err));
+const fetchResult = async () => {
+  try{
+    const data = await handleFetch();
+    console.log(`Success: ${data}`);
+  }
+  catch(error){
+    console.log(`Error: ${error}`);
+    
+  }
+};
+
+fetchResult();
