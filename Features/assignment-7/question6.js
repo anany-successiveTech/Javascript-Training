@@ -2,11 +2,16 @@
 
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
-};
+}
 
 async function delayedResult() {
-  await delay(2000); // waits for 2 seconds
-  return "Resolved after 2 seconds";
-};
+  try {
+    await delay(2000);
+    return "Resolved after 2 seconds";
+  } catch (error) {
+    console.log(`Something went wrong: ${error}`);
+  }
+}
+
 
 delayedResult().then((result) => console.log(result));

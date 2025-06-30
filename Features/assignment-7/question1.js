@@ -3,7 +3,12 @@
 const asynchronousCallback = (responseCallback) => {
   const response = fetch("https://catfact.ninja/fact");
   response
-    .then((res) => res.json())
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`Something went wrong: ${res.status}`);
+      }
+      return res.json();
+    })
     .then((data) => responseCallback(null, data))
     .catch((error) => responseCallback(error, null));
 };
@@ -11,9 +16,9 @@ const asynchronousCallback = (responseCallback) => {
 const callback = (error, data) => {
   if (error) {
     console.log(`Failed to get the fact: ${error}`);
-  } else {
-    console.log(`The cat fact is: ${data.fact}`);
-  }
+  } 
+  
+  console.log(`The cat fact is: ${data.fact}`);
 };
 
 asynchronousCallback(callback);
