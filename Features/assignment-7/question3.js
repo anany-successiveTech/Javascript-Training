@@ -6,8 +6,6 @@ const fetchData = (callback) => {
   }, 1000);
 };
 
-(err) => console.log("Error:", err));
-=======
 const handleFetch = () =>
   new Promise((resolve, reject) => {
     fetchData((err, data) => {
