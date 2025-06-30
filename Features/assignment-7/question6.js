@@ -13,4 +13,5 @@ async function delayedResult() {
   }
 }
 
+
 delayedResult().then((result) => console.log(result));

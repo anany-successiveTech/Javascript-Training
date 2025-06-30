@@ -16,7 +16,8 @@ const asynchronousCallback = (responseCallback) => {
 const callback = (error, data) => {
   if (error) {
     console.log(`Failed to get the fact: ${error}`);
-  }
+  } 
+  
   console.log(`The cat fact is: ${data.fact}`);
 };
 

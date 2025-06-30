@@ -18,6 +18,7 @@ const fetchDataParallel = async () => {
     const post = await postRes.json();
     const catFact = await catRes.json();
     const weather = await weatherRes.json();
+
     const combinedData = {
       postTitle: post.postTitle,
       fact: catFact.fact,
