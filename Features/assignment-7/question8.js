@@ -3,13 +3,14 @@
 const urls = {
   post: "https://jsonplaceholder.typicode.com/posts/1",
   catFact: "https://catfact.ninja/fact",
-  weather: "https://api.open-meteo.com/v1/forecast?latitude=35&longitude=139&hourly=temperature_2m",
+  weather:
+    "https://api.open-meteo.com/v1/forecast?latitude=35&longitude=139&hourly=temperature_2m",
 };
 
 const fetchDataParallel = async () => {
   try {
     const [postRes, catRes, weatherRes] = await Promise.all([
-      fetch(urls.post), 
+      fetch(urls.post),
       fetch(urls.catFact),
       fetch(urls.weather),
     ]);
@@ -18,12 +19,15 @@ const fetchDataParallel = async () => {
     const catFact = await catRes.json();
     const weather = await weatherRes.json();
 
-    console.log("Post Title:", post.title);
-    console.log("Cat Fact:", catFact.fact);
-    console.log("Current Temp (°C):", weather.hourly.temperature_2m[0]);
+    const combinedData = {
+      postTitle: post.postTitle,
+      fact: catFact.fact,
+      currenTemperature: weather.hourly.temperature_2m[0],
+    };
+    console.log("The combined data is: ", combinedData);
   } catch (error) {
     console.error("Error fetching data:", error);
   }
-}
+};
 
 fetchDataParallel();

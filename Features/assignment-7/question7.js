@@ -19,14 +19,16 @@ const taskThree = () => {
 };
 
 const runAllTasks = async () => {
-  const results = await Promise.all([taskOne(), taskTwo(), taskThree()]);
-  return results;
+  try {
+    const results = await Promise.all([taskOne(), taskTwo(), taskThree()]);
+    return results;
+  } catch (error) {
+    console.log(`Something went wrong: ${error}`);
+  }
 };
 
-
-runAllTasks().then(results => {
-  results.forEach((res, index) => {
-    console.log(`Task ${index + 1}: ${res}`);
-  });
+runAllTasks().then(([res1, res2, res3]) => {
+  console.log(res1);
+  console.log(res2);
+  console.log(res3);
 });
-
